@@ -34,6 +34,7 @@ var eventTypes = {
     },
     dependencies: [
       topLevelTypes.topBlur,
+      topLevelTypes.topCancel,
       topLevelTypes.topChange,
       topLevelTypes.topClick,
       topLevelTypes.topFocus,

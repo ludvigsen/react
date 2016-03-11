@@ -24,6 +24,7 @@ var topLevelTypes = keyMirror({
   topAnimationIteration: null,
   topAnimationStart: null,
   topBlur: null,
+  topCancel: null,
   topCanPlay: null,
   topCanPlayThrough: null,
   topChange: null,

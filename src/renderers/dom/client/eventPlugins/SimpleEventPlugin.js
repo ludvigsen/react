@@ -65,6 +65,12 @@ var eventTypes = {
       captured: keyOf({onBlurCapture: true}),
     },
   },
+  cancel: {
+    phasedRegistrationNames: {
+      bubbled: keyOf({onCancel: null}),
+      captured: keyOf({onCancelCapture: true}),
+    },
+  },
   canPlay: {
     phasedRegistrationNames: {
       bubbled: keyOf({onCanPlay: true}),
@@ -417,6 +423,7 @@ var topLevelEventsToDispatchConfig = {
   topAnimationIteration: eventTypes.animationIteration,
   topAnimationStart:  eventTypes.animationStart,
   topBlur:            eventTypes.blur,
+  topCancel:          eventTypes.cancel,
   topCanPlay:         eventTypes.canPlay,
   topCanPlayThrough:  eventTypes.canPlayThrough,
   topClick:           eventTypes.click,
@@ -500,6 +507,7 @@ var SimpleEventPlugin = {
     var EventConstructor;
     switch (topLevelType) {
       case topLevelTypes.topAbort:
+      case topLevelTypes.topCancel:
       case topLevelTypes.topCanPlay:
       case topLevelTypes.topCanPlayThrough:
       case topLevelTypes.topDurationChange:
